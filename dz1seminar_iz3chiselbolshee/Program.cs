@@ -8,7 +8,7 @@ Console.Write("Введите второе число : ");
 string userInputB = Console.ReadLine() ?? "";
 int b = int.Parse(userInputB);
 
-Console.Write("Введите nhtnmt число : ");
+Console.Write("Введите третье число : ");
 string userInputC = Console.ReadLine() ?? "";
 int c = int.Parse(userInputC);
 
