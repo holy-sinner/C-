@@ -6,12 +6,11 @@ int n = int.Parse(userInput);
 int i = 0;
 Console.Write($"{n}->");
 
-while (i < n - 3 )
+while (i < n - 3)
 {
-    i = i+2;
-    if (i%2 == 0)
+    i = i + 2;
     Console.Write($"{i},");
-    
+
 }
 i = i + 2;
 Console.Write($"{i}");
