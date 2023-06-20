@@ -2,9 +2,9 @@
 
 /*Console.Clear();
 
-Console.WriteLine("Vvedite chislo:");
-string chislo = Console.ReadLine();
-int a = int.Parse(chislo);
+Console.WriteLine("Введите число:");
+string number = Console.ReadLine();
+int a = int.Parse(number);
 int b = a / 10;
 int c = b % 10;
 
@@ -41,12 +41,12 @@ if ((a < 6 )&&(a > 0))
 {
     Console.WriteLine($"{a}-> нет");
 }
-if ((a > 5)&&(a < 8) )
+if ((a > 5)&&(a < 8))
 {
     Console.WriteLine($"{a}-> да");
 }
-if ((a < 1 )&&(a > 7))
+if ((a < 1)&&(a > 7))
 {
-    Console.WriteLine($"{a}-> ошибка вводв");
+    Console.WriteLine($"{a}-> ошибка ввода");
 }
 */
