@@ -1,15 +1,22 @@
 ﻿//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
-/*Console.Clear();
+/*
+Console.Clear();
 
-Console.WriteLine("Введите число:");
+Console.WriteLine("Введите трёхзначное число:");
 string number = Console.ReadLine();
 int a = int.Parse(number);
+
+if ((a > 99)&&(a < 1000))
+{
 int b = a / 10;
 int c = b % 10;
-
-
-Console.WriteLine($"{a}->{c}"); */
+Console.WriteLine($"{a}->{c}"); 
+}
+else
+{
+Console.WriteLine($"{a}->число не трёхзначное"); 
+} */
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
@@ -45,7 +52,7 @@ if ((a > 5)&&(a < 8))
 {
     Console.WriteLine($"{a}-> да");
 }
-if ((a < 1)&&(a > 7))
+else
 {
     Console.WriteLine($"{a}-> такого дня недели нету");
 }
