@@ -12,22 +12,22 @@ int x1, y1, z1, y2, x2, z2;
 
 try
 {
-    Console.Write("Введите x1: ");
+    Console.Write("Введите координаты x точки А: ");
     x1 = int.Parse(Console.ReadLine());
 
-    Console.Write("Введите y1: ");
+    Console.Write("Введите координаты y точки А: ");
     y1 = int.Parse(Console.ReadLine());
 
-    Console.Write("Введите z1: ");
+    Console.Write("Введите координаты z точки А: ");
     z1 = int.Parse(Console.ReadLine());
 
-    Console.Write("Введите x2: ");
+    Console.Write("Введите координаты x точки B: ");
     x2 = int.Parse(Console.ReadLine());
 
-    Console.Write("Введите y2: ");
+    Console.Write("Введите координаты y точки B: ");
     y2 = int.Parse(Console.ReadLine());
 
-    Console.Write("Введите z2: ");
+    Console.Write("Введите координаты z точки B: ");
     z2 = int.Parse(Console.ReadLine());
 }
 catch (Exception exc)
@@ -37,4 +37,4 @@ catch (Exception exc)
 }
 
 double distance = Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2) + (z1 - z2) * (z1 - z2));
-Console.WriteLine($"Расстояние между точками = {distance:f3}");
+Console.WriteLine($"A ({x1},{y1},{z1}); B ({x2},{y2},{z2}) -> {distance:f2}");
