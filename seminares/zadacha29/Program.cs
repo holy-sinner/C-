@@ -1,42 +1,39 @@
 ﻿Console.Clear();
 
-void FillArray(int[] collection)
+void FillArray(int[] array)
 
 {
-    int length = collection.Length;
+    int length = array.Length;
     int index = 0;
-    while (index < length)
+    Console.WriteLine("Введите элементы массива:");
+    
+    while (index < length - 1)
+    
     {
-        collection[index] = new Random().Next(0, 100);
+        
+        array[index] = int.Parse(Console.ReadLine());
+        Console.Write($"{array[index]}");
+        Console.Write($",");
         index++;
     }
+    
+
 }
-void PrintArray(int[] col)
+void PrintArray(int[] arr)
 {
-    int count = col.Length;
+    int count = arr.Length;
     int position = 0;
-    
-    while (position < count -1 )
-    {
-        
-        Console.Write($"{col[position]},");
-        position++;
-    }
-    
-    Console.Write($"{col[position]}");
-    Console.Write(" -> ");
- 
-    count = col.Length;
-    position = 0;
+
+
 
     Console.Write("[");
-        while (position < count -1 )
+    while (position < count - 1)
     {
-        
-        Console.Write($"{col[position]},");
+
+        Console.Write($"{arr[position]},");
         position++;
     }
-    Console.Write($"{col[position]}]");
+    Console.Write($"{arr[position]}]");
 }
 
 int[] array = new int[8];
