@@ -8,13 +8,14 @@ int minValue = GetNumberFromUser("Введите минимально число
 int maxValue = GetNumberFromUser("Введите максимальное число в массиве: ", "Ошибка ввода :(");
 
 
-double [] array = GetArray(size,minValue,maxValue);
+double[] array = GetArray(size, minValue, maxValue);
 double min = GetMinArray(array);
 double max = GetMaxArray(array);
-
 double A = max - min;
 
-Console.Write($"[{String.Join(", ", array)}] -> {A:f2}");
+Console.Write("[");
+PrintArray(array);
+Console.Write($" ] => {max:f2} - {min:f2} = {A:f2} ");
 
 
 int GetNumberFromUser(string message, string errormessage)
@@ -30,12 +31,12 @@ int GetNumberFromUser(string message, string errormessage)
     }
 }
 
-double[] GetArray(int size, double minvalue,double maxvalue) 
+double[] GetArray(int size, double minvalue, double maxvalue)
 {
     double[] res = new double[size];
     for (int i = 0; i < size; i++)
     {
-        res[i] = minValue + (new Random().NextDouble ()) * (maxvalue-minvalue);
+        res[i] = minValue + (new Random().NextDouble()) * (maxvalue - minvalue);
     }
     return res;
 }
@@ -43,19 +44,36 @@ double[] GetArray(int size, double minvalue,double maxvalue)
 double GetMinArray(double[] arr)
 {
     double min = arr[0];
-    for(int i = 1;i < arr.Length; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
-        if (arr[i]< min) min = arr[i];
+        if (arr[i] < min) min = arr[i];
     }
     return min;
 }
-
 double GetMaxArray(double[] arr)
 {
     double max = arr[0];
-    for(int i = 1;i < arr.Length; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
-        if (arr[i]> max) max = arr[i];
+        if (arr[i] > max) max = arr[i];
     }
     return max;
 }
+void PrintArray(double[] arr)
+{
+
+    int i = 0;
+
+    while (i < arr.Length - 1)
+    {
+
+        Console.Write($"{arr[i]:f2}  ");
+        i++;
+    }
+
+    Console.Write($"{arr[i]:f2}");
+}
+
+
+
+
