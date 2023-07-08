@@ -32,7 +32,6 @@ int GetCount(int [] arr)
      }
      return sum;
 }
-
 int GetNumberFromUser(string message, string errormessage)
 
 {
