@@ -3,34 +3,25 @@
 // 1, -7, 567, 89, 223-> 3
 
 
-int a = GetNumberFromUser("Введите число 1:", "Ошибка ввода :(");
-int b = GetNumberFromUser("Введите число 2:", "Ошибка ввода :(");
-int c = GetNumberFromUser("Введите число 3:", "Ошибка ввода :(");
-int d = GetNumberFromUser("Введите число 4:", "Ошибка ввода :(");
-int e = GetNumberFromUser("Введите число 5:", "Ошибка ввода :(");
+int m = GetNumberFromUser("Введите число элементов массива :", "Ошибка ввода :(");
 
-
-
-int [] array = GetArray(a, b, c, d, e);
+int [] array = GetArray(m);
 
 int finded = GetCount(array);
 
-Console.WriteLine($"{a},{b},{c},{d},{e}=> {finded}");
+Console.WriteLine($"{String.Join(",", array)} -> {finded}");
 
-
-
- int[] GetArray(int a,int b,int c,int d,int e) 
+int[] GetArray(int size) 
  {
 
-     int[] res = new int[5];
-     res[0] = a;
-     res[1] = b;
-     res[2] = c;
-     res[3] = d;
-     res[4] = e;
-     return res;
- }
+    int[] res = new int[size];
+    for(int i=0;i<size; i++)  
+    {
+       res[i] = GetNumberFromUser("Введите элемент массива :", "Ошибка ввода :(");
 
+    }
+    return res;
+ }
 int GetCount(int [] arr)
 {
      int sum = 0;
