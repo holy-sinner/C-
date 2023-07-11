@@ -25,9 +25,12 @@ int max = int.Parse(Console.ReadLine() ?? "");
 int[,] array = GetArray(rows, columns, min, max);
 
 PrintArray(array);
-Console.Write("Среднее арифметичское каждого столбца: ");
+double[] mean = MeanArray(array);
+Console.Write("Среднее арифметическое каждого столбца: ");
+PrintMeanArray(mean);
 
-Finded(array);
+
+//Finded(array);
 
 
 
@@ -56,27 +59,56 @@ void PrintArray(int[,] inArray)
     }
 }
 
-void Finded(int[,] inArray)
+double[] MeanArray(int[,] arr)
+
 {
-    int j = 0;
-    double mean = 0;
-    while (j < inArray.GetLength(1) - 1)
-    {
-        
-        for (int i = 0; i < inArray.GetLength(0); i++)
-        {
-            mean = mean + inArray[i, j];
-        }
-        Console.Write($"{mean / inArray.GetLength(0)} ; ");
-        j++;
-    }
+    double[] meanArr = new double[arr.GetLength(1)];
+
     
-    mean = 0;
-    for (int i = 0; i < inArray.GetLength(0); i++)
+    
+    for (int j = 0;j < arr.GetLength(1); j++)
     {
-        mean = mean + inArray[i, j];
+        double sum = 0;    
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            sum = sum + arr[i, j];
+        }
+        meanArr[j] = sum / arr.GetLength(0);
+        
     }
-    Console.Write($"{mean / inArray.GetLength(0)}.");
-
-
+    return meanArr;
 }
+
+void PrintMeanArray(double[] inArray)
+{
+    for (int i = 0; i < inArray.Length - 1; i++)
+    {
+        Console.Write($"{inArray[i]:f1} ; ");
+    }
+    Console.Write($"{inArray[inArray.Length-1]:f1}. ");
+}
+
+// void Finded(int[,] inArray)
+// {
+//     int j = 0;
+//     double mean = 0;
+//     while (j < inArray.GetLength(1) - 1)
+//     {
+
+//         for (int i = 0; i < inArray.GetLength(0); i++)
+//         {
+//             mean = mean + inArray[i, j];
+//         }
+//         Console.Write($"{mean / inArray.GetLength(0)} ; ");
+//         j++;
+//     }
+
+//     mean = 0;
+//     for (int i = 0; i < inArray.GetLength(0); i++)
+//     {
+//         mean = mean + inArray[i, j];
+//     }
+//     Console.Write($"{mean / inArray.GetLength(0)}.");
+
+
+// }
