@@ -59,9 +59,10 @@ void PrintArray(int[,] inArray)
 void Finded(int[,] inArray)
 {
     int j = 0;
+    double mean = 0;
     while (j < inArray.GetLength(1) - 1)
     {
-        double mean = 0;
+        
         for (int i = 0; i < inArray.GetLength(0); i++)
         {
             mean = mean + inArray[i, j];
@@ -70,12 +71,12 @@ void Finded(int[,] inArray)
         j++;
     }
     
-    double mean1 = 0;
+    mean = 0;
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
-        mean1 = mean1 + inArray[i, j];
+        mean = mean + inArray[i, j];
     }
-    Console.Write($"{mean1 / inArray.GetLength(0)}.");
+    Console.Write($"{mean / inArray.GetLength(0)}.");
 
 
 }
