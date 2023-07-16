@@ -8,12 +8,12 @@ Console.Write("Введите второе число : ");
 string userInputB = Console.ReadLine() ?? "";
 int userNumberB = int.Parse(userInputB);
 
-if(userNumberA == userNumberB*userNumberB )
+if (userNumberA == userNumberB * userNumberB)
 {
- Console.WriteLine("Да!");
+    Console.WriteLine("Да!");
 }
 else
 {
- Console.WriteLine("Нет((");
+    Console.WriteLine("Нет((");
 }
 

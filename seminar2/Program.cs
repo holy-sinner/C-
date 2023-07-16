@@ -20,15 +20,12 @@ Console.WriteLine($"{a}->число не трёхзначное");
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-/*
+
+
 Console.WriteLine("Введите число:");
 string number = Console.ReadLine();
 int a = int.Parse(number);
-if (a < 100)
-{
-    Console.WriteLine($"{a}->третьей цифры нет");
-}
-else
+if (a > 99)
 {
 while (a > 1000)
     {
@@ -36,7 +33,11 @@ while (a > 1000)
     }
 Console.WriteLine($"{number}->{a % 10}");
 }
-*/
+else
+{
+    Console.WriteLine($"{a}->третьей цифры нет");
+}
+
 
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
@@ -44,16 +45,13 @@ Console.WriteLine($"{number}->{a % 10}");
 Console.WriteLine("Введите цифру дня недели:");
 string number = Console.ReadLine();
 int a = int.Parse(number);
-if ((a < 6 )&&(a > 0))
+if ((a > 0) && (a < 8))
 {
-    Console.WriteLine($"{a}-> нет");
-}
-if ((a > 5)&&(a < 8))
-{
-    Console.WriteLine($"{a}-> да");
+    if (a == 6 || a == 7)
+    { Console.WriteLine($"{a}-> да"); }
+    else
+    { Console.WriteLine($"{a}-> нет "); }
 }
 else
-{
-    Console.WriteLine($"{a}-> такого дня недели нету");
-}
+{ Console.WriteLine($"{a}-> такого дня недели нету "); }
 */

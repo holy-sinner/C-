@@ -5,35 +5,35 @@ string userInput = Console.ReadLine() ?? "";
 int userNumber = int.Parse(userInput);
 
 
-if(userNumber == 1 )
+if (userNumber == 1)
 {
- Console.WriteLine("Понедельник день тяжёлый((");
+    Console.WriteLine("Понедельник день тяжёлый((");
 }
-if(userNumber == 2 )
+if (userNumber == 2)
 {
- Console.WriteLine("Охх, уже вторник");
+    Console.WriteLine("Охх, уже вторник");
 }
-if(userNumber == 3 )
+if (userNumber == 3)
 {
- Console.WriteLine("Среда, почти половина недели позади");
+    Console.WriteLine("Среда, почти половина недели позади");
 }
-if(userNumber == 4 )
+if (userNumber == 4)
 {
- Console.WriteLine("Четверг, ну еще чуть-чуть осталось ");
+    Console.WriteLine("Четверг, ну еще чуть-чуть осталось ");
 }
-if(userNumber == 5 )
+if (userNumber == 5)
 {
- Console.WriteLine("Ура, пятницв! Надо сегодня нажраться))");
+    Console.WriteLine("Ура, пятницв! Надо сегодня нажраться))");
 }
-if(userNumber == 6 )
+if (userNumber == 6)
 {
- Console.WriteLine("Суббота, ох отосплюсь же я сегодня!");
+    Console.WriteLine("Суббота, ох отосплюсь же я сегодня!");
 }
-if(userNumber == 7 )
+if (userNumber == 7)
 {
- Console.WriteLine("Воскресенье, люблю воскресенье))");
+    Console.WriteLine("Воскресенье, люблю воскресенье))");
 }
 else
 {
- Console.WriteLine("Ты что-то ввёл неверно))");
+    Console.WriteLine("Ты что-то ввёл неверно))");
 }
